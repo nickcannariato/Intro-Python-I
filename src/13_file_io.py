@@ -7,9 +7,6 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 
 from os.path import abspath, dirname
 
-# Open up the "foo.txt" file (which already exists) for reading
-# Print all the contents of the file, then close the file
-
 
 def read_and_print(file_path):
     """Open a file print it to the console
@@ -20,12 +17,6 @@ def read_and_print(file_path):
     with open(file_path, 'r') as f:
         for line in f:
             print(line)
-
-
-# Open up a file called "bar.txt" (which doesn't exist yet) for
-# writing. Write three lines of arbitrary content to that file,
-# then close the file. Open up "bar.txt" and inspect it to make
-# sure that it contains what you expect it to contain
 
 
 def write_lines(file_path, text_to_write):
@@ -54,10 +45,14 @@ def main():
     # Path to the directory of the module
     base_path = dirname(abspath(__file__))
 
-    # Read foo.txt (already exists)
+    # Open up the "foo.txt" file (which already exists) for reading
+    # Print all the contents of the file, then close the file
     read_and_print(f'{base_path}/foo.txt')
 
-    # Create bar.txt and then read it
+    # Open up a file called "bar.txt" (which doesn't exist yet) for
+    # writing. Write three lines of arbitrary content to that file,
+    # then close the file. Open up "bar.txt" and inspect it to make
+    # sure that it contains what you expect it to contain
     write_lines(f'{base_path}/bar.txt', lines)
     read_and_print(f'{base_path}/bar.txt')
 
