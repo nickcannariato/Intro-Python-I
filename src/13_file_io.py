@@ -57,6 +57,7 @@ def main():
     read_and_print(f'{base_path}/bar.txt')
 
     # OPTIONAL: see how write_lines() can handle both strings and arrays
+    # lines2 = 'this is\njust\na string'
     # write_lines(f'{base_path}/baz.txt', lines2)
     # read_and_print(f'{base_path}/baz.txt')
 
