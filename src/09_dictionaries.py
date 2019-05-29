@@ -44,8 +44,7 @@ waypoints.append(
 # YOUR CODE HERE
 for location in waypoints:
     if location['name'] == 'a place':
-        location['lon'] = -130
-        location['name'] = 'not a real place'
+        location.update({'lon': -130, 'name': 'not a real place'})
 
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
